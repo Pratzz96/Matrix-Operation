@@ -1,0 +1,61 @@
+head	1.1;
+access;
+symbols;
+locks
+	root:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	2016.07.26.16.13.13;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@In this we transpose the matrix 
+Rows and column is entered by the user
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include<stdio.h>
+int a17()
+{
+	printf("\t\t____________________TRANSPOSE OF MATRIX____________________\n");
+	int rows,col,i,j;
+	printf("Enter the no of rows and column of MATRIX 'A':\n");
+	scanf("%d%d",&rows,&col);
+	int a[rows][col];
+	int b[col][rows];
+	printf("Enter the elements of MATRIX 'A'\n");
+	for(i=0;i<rows;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("\t\t_______________TRANSPOSE OF MATRIX 'A'_______________\n");
+	for(i=0;i<rows;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			b[j][i]=a[i][j];
+		}
+	}
+	for(i=0;i<col;i++)
+	{
+		for(j=0;j<rows;j++)
+		{
+			printf("\t\t%d",b[i][j]);
+		}
+			printf("\n");
+	}
+return 0;
+}
+@

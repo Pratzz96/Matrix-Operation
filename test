@@ -1,0 +1,28 @@
+#! /bin/bash
+checkin()
+{
+        for file in $(ls *.h)
+
+        do
+                ci $file
+        done
+                for file in $(ls *.c)
+        do
+                ci $file
+        done
+}
+checkout()
+{
+                for file in $(ls *.h,v)
+        do
+                co $file
+        done 
+                for file in $(ls *.c,v)
+        do
+                co -l $file 
+        done
+}
+checkin
+checkout
+make
+./operation 

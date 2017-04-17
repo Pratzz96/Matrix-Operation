@@ -1,0 +1,29 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2016.07.26.16.10.00;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@In this we add all prototypes that require in all operations in this programs
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@void a15();
+void a16();
+void a17();
+void a18();
+
+@
